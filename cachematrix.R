@@ -1,3 +1,11 @@
+## The function makeCacheMatrix creates an object storing a matrix and its inverse, 
+## 	so that the inverse does not have to be computed each time its value is needed
+## The function cacheSolve takes an object returned by makeCacheMatrix, and either returns the inverse
+##	of the matrix stored in it if the inverse has been computed, or computes and returns the inverse 
+##	and stores its value in the object for future use
+
+## makeCacheMatrix accepts one argument: a matrix x (default 1 by 1 matrix with NA)
+## creates internally a matrix (copy of x) and a variable to store its inverse (initialized to NULL)
 ## returns a list of four functions:
 ##	set: accepts one matrix argument and sets that as the value of the internal matrix
 ##	     reinitializes stored inverse value to NULL (inverse is not computed until it is needed)
